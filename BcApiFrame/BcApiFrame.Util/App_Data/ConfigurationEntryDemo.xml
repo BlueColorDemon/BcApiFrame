@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DefaultLanguage>en-US</DefaultLanguage>
+  <SiteTitle>BlueColor</SiteTitle>
+  <SiteFooterMessage>版权所有 © 梁智慧 · QQ：214909012@qq.com</SiteFooterMessage>
+</Configuration>
