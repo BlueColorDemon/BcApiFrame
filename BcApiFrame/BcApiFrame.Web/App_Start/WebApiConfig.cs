@@ -11,6 +11,7 @@ namespace BcApiFrame.Web
         {
             config.Filters.Add(new Log.Filter_ApiRecord.Filter_ApiRecord());
             config.Filters.Add(new Log.Filter_ErrorRecord.ApiHandleErrorAttribute());
+            config.Filters.Add(new Log.Filter_Monitor.StatisticsTrackerApiAttribute());
 
             // Web API 配置和服务
 

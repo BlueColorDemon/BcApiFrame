@@ -112,6 +112,8 @@
     <Compile Include="Core\NLogHelper.cs" />
     <Compile Include="Core\LogUtil.cs" />
     <Compile Include="Core\Log4NetHelper.cs" />
+    <Compile Include="Filter_Monitor\MonitorLog.cs" />
+    <Compile Include="Filter_Monitor\StatisticsTrackerApiAttribute.cs" />
     <Compile Include="Filter_Monitor\StatisticsTrackerAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Filter_QueueRecord\Filter_QueueRecord.cs" />
