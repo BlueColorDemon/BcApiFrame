@@ -78,6 +78,15 @@ namespace BcApiFrame.Log
         {
             logger.Fatal(msg, err);
         }
+
+        /// <summary>
+        /// 本问题由于DLL间接引用丢失导致（未静态使用DLL，动态使用DLL）
+        /// 即：第三方程序引用丢失Growl相关程序集
+        /// </summary>
+        public void Safe_DLL()
+        {            
+            NLog.Targets.GrowlNotify test = null;
+        }
     }
 
 
