@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace BcApiFrame.Log.Filters
+namespace BcApiFrame.Log.Filter_CrossDomain
 {
     /// <summary>
     /// 允许跨域站点访问

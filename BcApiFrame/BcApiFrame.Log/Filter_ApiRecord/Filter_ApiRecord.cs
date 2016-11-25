@@ -7,12 +7,12 @@ using System.Web;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
 
-namespace BcApiFrame.Log.ApiRecord
+namespace BcApiFrame.Log.Filter_ApiRecord
 {
     /// <summary>
     /// api 接口,全局日志统计
     /// </summary>
-    public class LogApiFilter : ActionFilterAttribute
+    public class Filter_ApiRecord : ActionFilterAttribute
     {
         /// <summary>
         /// 接口调用之前

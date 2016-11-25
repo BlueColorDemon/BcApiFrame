@@ -9,6 +9,9 @@ namespace BcApiFrame.Web
     {
         public static void Register(HttpConfiguration config)
         {
+            config.Filters.Add(new Log.Filter_ApiRecord.Filter_ApiRecord());
+            config.Filters.Add(new Log.Filter_ErrorRecord.ApiHandleErrorAttribute());
+
             // Web API 配置和服务
 
             // Web API 路由

@@ -11,7 +11,7 @@ namespace BcApiFrame.Util.RootPath
     public class RootPath
     {
         /// <summary>
-        /// 获取根路径
+        /// 获取网站根目录
         /// </summary>
         /// <param name="path">相对路径</param>
         /// <returns></returns>
@@ -20,6 +20,18 @@ namespace BcApiFrame.Util.RootPath
             return Path.IsPathRooted(path)
                 ? path
                 : HttpContext.Current.Server.MapPath(path);
+        }
+
+        /// <summary>
+        /// 获取网站Bin目录
+        /// </summary>
+        /// <param name="path">相对路径</param>
+        /// <returns></returns>
+        public static string GetBinDirectory(string path)
+        {
+            return Path.IsPathRooted(path)
+                ? path
+                : Path.Combine(HttpRuntime.BinDirectory, path);
         }
     }
 }

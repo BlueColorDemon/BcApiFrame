@@ -26,7 +26,6 @@ namespace BcApiFrame.Log
 
         static NLogHelper()
         {
-            //var dd= NLog.LogManager.Configurati
             Default = new NLogHelper(NLog.LogManager.GetCurrentClassLogger());
         }
 
