@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BcApiFrame.Data", "BcApiFra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BcApiFrame.Util", "BcApiFrame.Util\BcApiFrame.Util.csproj", "{D9D73DE5-BFC0-45FD-A5C8-A0E29D4523FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BcApiFrame.Test", "BcApiFrame.Test\BcApiFrame.Test.csproj", "{B29001D8-E44D-49AB-BE49-33B6D3F16B9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{D9D73DE5-BFC0-45FD-A5C8-A0E29D4523FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9D73DE5-BFC0-45FD-A5C8-A0E29D4523FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9D73DE5-BFC0-45FD-A5C8-A0E29D4523FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B29001D8-E44D-49AB-BE49-33B6D3F16B9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B29001D8-E44D-49AB-BE49-33B6D3F16B9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B29001D8-E44D-49AB-BE49-33B6D3F16B9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B29001D8-E44D-49AB-BE49-33B6D3F16B9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

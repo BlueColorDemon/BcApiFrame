@@ -1,3 +1,5 @@
+
+
 using BcApiFrame.Data.DAL;
 using BcApiFrame.Data.Entity.ApiBase;
 using BcApiFrame.Util.Singleton;
@@ -7,25 +9,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BcApiFrame.Data.BLL.ApiCloud
+namespace BcApiFrame.Data.BLL.ApiBase
 {
-    public partial class BaseApiRecordMapBLL : BaseBLL<BaseApiRecordMap>
+    public partial class BaseFunctionBLL : BaseBLL<BaseFunction>
     {
-        private readonly BaseDAL<BaseApiRecordMap> _BaseApiRecordMapDal;
-        public BaseApiRecordMapBLL()
+        private readonly BaseDAL<BaseFunction> _BaseFunctionDal;
+        public BaseFunctionBLL()
             : base()
         {
-            _BaseApiRecordMapDal = base.Dal;
+            _BaseFunctionDal = base.Dal;
         }
 
 		#region 单例模式
 
 
-        public static BaseApiRecordMap Instance
+        public static BaseFunctionBLL Instance
         {
             get
             {
-                return Singleton<BaseApiRecordMap>.Instance;
+                return Singleton<BaseFunctionBLL>.Instance;
             }
         }
 

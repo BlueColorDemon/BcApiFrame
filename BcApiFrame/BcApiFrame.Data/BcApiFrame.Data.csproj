@@ -60,26 +60,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ApiBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="BLL\BaseApiRecordMapBLL.cs">
+    <Compile Include="BLL\BaseApiRecordBLL.cs">
       <DependentUpon>ApiBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="BLL\BaseAppMapBLL.cs">
+    <Compile Include="BLL\BaseAppBLL.cs">
       <DependentUpon>ApiBase.tt</DependentUpon>
     </Compile>
     <Compile Include="BLL\BaseBLL.cs" />
-    <Compile Include="BLL\BaseFunctionMapBLL.cs">
+    <Compile Include="BLL\BaseFunctionBLL.cs">
       <DependentUpon>ApiBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="BLL\BaseLogMapBLL.cs">
+    <Compile Include="BLL\BaseLogBLL.cs">
       <DependentUpon>ApiBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="BLL\BaseRoleMapBLL.cs">
+    <Compile Include="BLL\BaseRoleBLL.cs">
       <DependentUpon>ApiBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="BLL\BaseUserDetailMapBLL.cs">
+    <Compile Include="BLL\BaseUserBLL.cs">
       <DependentUpon>ApiBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="BLL\BaseUserMapBLL.cs">
+    <Compile Include="BLL\BaseUserDetailBLL.cs">
       <DependentUpon>ApiBase.tt</DependentUpon>
     </Compile>
     <Compile Include="BLL\MultiOutput.cs">

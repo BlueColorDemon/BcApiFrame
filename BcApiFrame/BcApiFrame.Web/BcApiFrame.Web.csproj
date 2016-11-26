@@ -212,6 +212,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BcApiFrame.Data\BcApiFrame.Data.csproj">
+      <Project>{7f498def-5fc8-49f8-ac5a-d7d664614ee5}</Project>
+      <Name>BcApiFrame.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BcApiFrame.Log\BcApiFrame.Log.csproj">
       <Project>{c5c04f01-b9c5-4ea6-ab61-c5711311f3a2}</Project>
       <Name>BcApiFrame.Log</Name>

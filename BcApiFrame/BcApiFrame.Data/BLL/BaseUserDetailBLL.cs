@@ -7,25 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BcApiFrame.Data.BLL.ApiCloud
+namespace BcApiFrame.Data.BLL.ApiBase
 {
-    public partial class BaseUserMapBLL : BaseBLL<BaseUserMap>
+    public partial class BaseUserDetailBLL : BaseBLL<BaseUserDetail>
     {
-        private readonly BaseDAL<BaseUserMap> _BaseUserMapDal;
-        public BaseUserMapBLL()
+        private readonly BaseDAL<BaseUserDetail> _BaseUserDetailDal;
+        public BaseUserDetailBLL()
             : base()
         {
-            _BaseUserMapDal = base.Dal;
+            _BaseUserDetailDal = base.Dal;
         }
 
 		#region 单例模式
 
 
-        public static BaseUserMap Instance
+        public static BaseUserDetailBLL Instance
         {
             get
             {
-                return Singleton<BaseUserMap>.Instance;
+                return Singleton<BaseUserDetailBLL>.Instance;
             }
         }
 

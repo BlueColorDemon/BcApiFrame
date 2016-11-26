@@ -3,13 +3,13 @@
 
 <#
 	 List<string> names=new List<string>(){};
-	 names.Add("BaseFunctionMap");
-	 names.Add("BaseRoleMap");
-	 names.Add("BaseUserMap");
-	 names.Add("BaseUserDetailMap");
-	 names.Add("BaseAppMap");
-	 names.Add("BaseLogMap");
-	 names.Add("BaseApiRecordMap");
+	 names.Add("BaseFunction");
+	 names.Add("BaseRole");
+	 names.Add("BaseUser");
+	 names.Add("BaseUserDetail");
+	 names.Add("BaseApp");
+	 names.Add("BaseLog");
+	 names.Add("BaseApiRecord");
 foreach (string name in names)
     {
 #>
@@ -22,7 +22,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BcApiFrame.Data.BLL.ApiCloud
+namespace BcApiFrame.Data.BLL.ApiBase
 {
     public partial class <#= name #>BLL : BaseBLL<<#= name #>>
     {
@@ -36,11 +36,11 @@ namespace BcApiFrame.Data.BLL.ApiCloud
 		#region 单例模式
 
 
-        public static <#= name #> Instance
+        public static <#= name #>BLL Instance
         {
             get
             {
-                return Singleton<<#= name #>>.Instance;
+                return Singleton<<#= name #>BLL>.Instance;
             }
         }
 

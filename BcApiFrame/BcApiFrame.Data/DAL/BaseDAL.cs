@@ -97,7 +97,7 @@ namespace BcApiFrame.Data.DAL
                     return true;
                 }
             }
-            catch
+            catch (Exception ex)
             {
                 return false;
             }
@@ -125,7 +125,7 @@ namespace BcApiFrame.Data.DAL
                     return true;
                 }
             }
-            catch
+            catch(Exception ex)
             {
                 return false;
             }
