@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace BC.AppCloud.Entity.AppCloud
+namespace BcApiFrame.Data.Entity.AppCloud
 {
     public class AppCloud_Baseframe : BaseModel
     {

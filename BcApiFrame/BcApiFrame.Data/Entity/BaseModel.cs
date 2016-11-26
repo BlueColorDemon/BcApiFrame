@@ -3,13 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace BC.AppCloud.Entity
+namespace BcApiFrame.Data.Entity
 {
     /// <summary>
     /// 基本模型
     /// </summary>
     public class BaseModel
     {
+        public BaseModel()
+        {
+            Id = Guid.NewGuid();
+            CreateTime = DateTime.Now;
+            UpdateTime = DateTime.Now;
+            State = BaseModelState.Default;
+        }
+
         /// <summary>
         /// 编号
         /// </summary>
@@ -26,7 +34,7 @@ namespace BC.AppCloud.Entity
         public string CreateUser { get; set; }
 
         /// <summary>
-        /// 跟新时间
+        /// 更新时间
         /// </summary>
         public DateTime UpdateTime { get; set; }
 
@@ -38,11 +46,12 @@ namespace BC.AppCloud.Entity
         /// <summary>
         /// 数据状态
         /// </summary>
-        public int State { get; set; }
+        public BaseModelState State { get; set; }
+
     }
 
     /// <summary>
-    /// 基本模型状态
+    /// 基本模型数据状态
     /// </summary>
     public enum BaseModelState
     {
@@ -55,4 +64,7 @@ namespace BC.AppCloud.Entity
         /// </summary>
         Deleted = 1
     }
+
+
+
 }

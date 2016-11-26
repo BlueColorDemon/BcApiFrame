@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BC.AppCloud.Common
+namespace BcApiFrame.Data.Common
 {
     public static class FriendlyMessage
     {

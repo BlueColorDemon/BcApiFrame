@@ -1,5 +1,5 @@
-using BC.AppCloud.DAL;
-using BC.AppCloud.Entity.ApiCloud;
+using BcApiFrame.Data.DAL;
+using BcApiFrame.Data.Entity.ApiCloud;
 using BcApiFrame.Util.Singleton;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BC.AppCloud.BLL.ApiCloud
+namespace BcApiFrame.Data.BLL.ApiCloud
 {
     public partial class ApiCloud_ApiListItemBLL : BaseBLL<ApiCloud_ApiListItem>
     {

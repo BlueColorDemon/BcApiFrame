@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BC.AppCloud.Common
+namespace BcApiFrame.Data.Common
 {
     /// <summary>
     /// 单元格值类型（日期作为文本处理）

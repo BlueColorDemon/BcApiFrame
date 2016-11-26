@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace BC.AppCloud.Common
+namespace BcApiFrame.Data.Common
 {
     /// <summary>
     /// EF扩展工具类

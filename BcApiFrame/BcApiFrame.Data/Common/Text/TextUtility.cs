@@ -5,7 +5,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace BC.AppCloud.Common
+namespace BcApiFrame.Data.Common
 {
     /// <summary>
     /// 文本基本操作类

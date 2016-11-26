@@ -1,5 +1,5 @@
-﻿using BC.AppCloud.Common;
-using BC.AppCloud.DAL;
+﻿using BcApiFrame.Data.Common;
+using BcApiFrame.Data.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BC.AppCloud.BLL
+namespace BcApiFrame.Data.BLL
 {
     public class BaseBLL<T> where T : class
     {

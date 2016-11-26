@@ -45,6 +45,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,9 +73,21 @@
       <DependentUpon>ApiCloud.tt</DependentUpon>
     </Compile>
     <Compile Include="BLL\AppCloud.cs">
-      <DependentUpon>AppCloud.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>AppCloud.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\AppCloud_AppGroupItemBLL.cs">
+      <DependentUpon>AppCloud.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\AppCloud_BaseframeBLL.cs">
+      <DependentUpon>AppCloud.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\AppCloud_ConfigBLL.cs">
+      <DependentUpon>AppCloud.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\AppCloud_OrgGroupItemBLL.cs">
+      <DependentUpon>AppCloud.tt</DependentUpon>
     </Compile>
     <Compile Include="BLL\BaseBLL.cs" />
     <Compile Include="BLL\MultiOutput.cs">
@@ -91,6 +105,7 @@
     <Compile Include="Common\Text\TextUtility.cs" />
     <Compile Include="DAL\BaseDAL.cs" />
     <Compile Include="Entity\ApiBase\ApiBase.cs" />
+    <Compile Include="Entity\ApiBase\ApiBaseMap.cs" />
     <Compile Include="Entity\ApiCloud\ApiCloud.cs" />
     <Compile Include="Entity\AppCloud\AppCloud.cs" />
     <Compile Include="Entity\BaseModel.cs" />
@@ -98,12 +113,18 @@
     <Compile Include="Entity\FunctionCloud\FunctionCloud.cs" />
     <Compile Include="Entity\IndexBuild\IndexBuild.cs" />
     <Compile Include="Entity\ModelAC.cs" />
+    <Compile Include="Migrations\201611260813473_FirstMigration.cs" />
+    <Compile Include="Migrations\201611260813473_FirstMigration.Designer.cs">
+      <DependentUpon>201611260813473_FirstMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BLL\ApiCloud\" />
     <Folder Include="BLL\AppCloud\" />
     <Folder Include="Entity\Migrations\" />
+    <Folder Include="Test\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -133,6 +154,11 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201611260813473_FirstMigration.resx">
+      <DependentUpon>201611260813473_FirstMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

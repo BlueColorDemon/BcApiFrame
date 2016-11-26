@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace BC.AppCloud.Common
+namespace BcApiFrame.Data.Common
 {
     public static class ConvertUtility
     {

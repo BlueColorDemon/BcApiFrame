@@ -5,9 +5,9 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using BC.AppCloud.Common;
+using BcApiFrame.Data.Common;
 
-namespace BC.AppCloud.DAL
+namespace BcApiFrame.Data.DAL
 {
     public class BaseDAL<T> where T : class
     {
@@ -15,7 +15,7 @@ namespace BC.AppCloud.DAL
         protected readonly DbSet<T> _DbSet;
 
         public BaseDAL()
-            : this(new BC.AppCloud.Entity.ModelAC())
+            : this(new BcApiFrame.Data.Entity.ModelAC())
         { }
 
         public BaseDAL(DbContext context)

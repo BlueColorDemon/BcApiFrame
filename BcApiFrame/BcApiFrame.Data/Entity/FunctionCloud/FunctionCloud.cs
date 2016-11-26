@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace BC.AppCloud.Entity.FunctionCloud
+namespace BcApiFrame.Data.Entity.FunctionCloud
 {
     public class Baseframe
     {
@@ -48,7 +48,7 @@ namespace BC.AppCloud.Entity.FunctionCloud
         /// </summary>
         public List<ListItem> list { get; set; }
     }
-    
+
 
     public class Login
     {
@@ -61,7 +61,7 @@ namespace BC.AppCloud.Entity.FunctionCloud
         /// </summary>
         public List<ListItem> list { get; set; }
     }
-    
+
 
     public class Index
     {
@@ -74,7 +74,7 @@ namespace BC.AppCloud.Entity.FunctionCloud
         /// </summary>
         public List<ListItem> list { get; set; }
     }
-    
+
 
     public class About
     {
@@ -87,7 +87,7 @@ namespace BC.AppCloud.Entity.FunctionCloud
         /// </summary>
         public List<ListItem> list { get; set; }
     }
-    
+
 
     public class Update
     {
@@ -100,7 +100,7 @@ namespace BC.AppCloud.Entity.FunctionCloud
         /// </summary>
         public List<ListItem> list { get; set; }
     }
-    
+
 
     public class Contacts
     {
@@ -113,7 +113,7 @@ namespace BC.AppCloud.Entity.FunctionCloud
         /// </summary>
         public List<ListItem> list { get; set; }
     }
-    
+
 
     public class Notice
     {
@@ -126,7 +126,7 @@ namespace BC.AppCloud.Entity.FunctionCloud
         /// </summary>
         public List<ListItem> list { get; set; }
     }
-    
+
 
     public class News
     {
@@ -139,7 +139,7 @@ namespace BC.AppCloud.Entity.FunctionCloud
         /// </summary>
         public List<ListItem> list { get; set; }
     }
-    
+
 
     public class TimeTable
     {
@@ -152,7 +152,7 @@ namespace BC.AppCloud.Entity.FunctionCloud
         /// </summary>
         public List<ListItem> list { get; set; }
     }
-    
+
 
     public class Salary
     {
@@ -165,7 +165,7 @@ namespace BC.AppCloud.Entity.FunctionCloud
         /// </summary>
         public List<ListItem> list { get; set; }
     }
-    
+
 
     public class OnlineSurvey
     {
@@ -178,7 +178,7 @@ namespace BC.AppCloud.Entity.FunctionCloud
         /// </summary>
         public List<ListItem> list { get; set; }
     }
-    
+
 
     public class ToDo
     {
@@ -191,7 +191,7 @@ namespace BC.AppCloud.Entity.FunctionCloud
         /// </summary>
         public List<ListItem> list { get; set; }
     }
-    
+
 
     public class Mail
     {
@@ -204,7 +204,7 @@ namespace BC.AppCloud.Entity.FunctionCloud
         /// </summary>
         public List<ListItem> list { get; set; }
     }
-    
+
 
     public class WorkPlan
     {
@@ -217,7 +217,7 @@ namespace BC.AppCloud.Entity.FunctionCloud
         /// </summary>
         public List<ListItem> list { get; set; }
     }
-    
+
 
     public class Log
     {
@@ -230,7 +230,7 @@ namespace BC.AppCloud.Entity.FunctionCloud
         /// </summary>
         public List<ListItem> list { get; set; }
     }
-    
+
 
     public class Sign
     {
@@ -243,7 +243,7 @@ namespace BC.AppCloud.Entity.FunctionCloud
         /// </summary>
         public List<ListItem> list { get; set; }
     }
-    
+
 
     public class YunFile
     {
@@ -256,7 +256,7 @@ namespace BC.AppCloud.Entity.FunctionCloud
         /// </summary>
         public List<ListItem> list { get; set; }
     }
-    
+
 
     public class Workflow
     {
@@ -269,7 +269,7 @@ namespace BC.AppCloud.Entity.FunctionCloud
         /// </summary>
         public List<ListItem> list { get; set; }
     }
-    
+
     public class TelMeeting
     {
         /// <summary>
@@ -281,7 +281,7 @@ namespace BC.AppCloud.Entity.FunctionCloud
         /// </summary>
         public List<ListItem> list { get; set; }
     }
-    
+
 
     public class CustomerInfo
     {
@@ -294,7 +294,7 @@ namespace BC.AppCloud.Entity.FunctionCloud
         /// </summary>
         public List<ListItem> list { get; set; }
     }
-    
+
 
     public class VisitPlan
     {
@@ -307,7 +307,7 @@ namespace BC.AppCloud.Entity.FunctionCloud
         /// </summary>
         public List<ListItem> list { get; set; }
     }
-    
+
 
     public class Chat
     {
@@ -320,7 +320,7 @@ namespace BC.AppCloud.Entity.FunctionCloud
         /// </summary>
         public List<ListItem> list { get; set; }
     }
-    
+
 
     public class Message
     {

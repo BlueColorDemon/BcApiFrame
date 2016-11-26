@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace BC.AppCloud.Entity.ApiCloud
+namespace BcApiFrame.Data.Entity.ApiCloud
 {
     public class ApiCloud_ApiRequestInputItem : BaseModel
     {
