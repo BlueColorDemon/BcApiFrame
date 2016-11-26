@@ -3,15 +3,18 @@
 
 <#
 	 List<string> names=new List<string>(){};
-	 names.Add("ApiCloud_ApiRequestInputItem");
-	 names.Add("ApiCloud_ApiResponseOutputItem");
-	 names.Add("ApiCloud_ApiListItem");
-	 names.Add("ApiCloud_ProjectListItem");
+	 names.Add("BaseFunctionMap");
+	 names.Add("BaseRoleMap");
+	 names.Add("BaseUserMap");
+	 names.Add("BaseUserDetailMap");
+	 names.Add("BaseAppMap");
+	 names.Add("BaseLogMap");
+	 names.Add("BaseApiRecordMap");
 foreach (string name in names)
     {
 #>
 using BcApiFrame.Data.DAL;
-using BcApiFrame.Data.Entity.ApiCloud;
+using BcApiFrame.Data.Entity.ApiBase;
 using BcApiFrame.Util.Singleton;
 using System;
 using System.Collections.Generic;

@@ -4,8 +4,6 @@ namespace BcApiFrame.Data.Entity
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
-    using AppCloud;
-    using ApiCloud;
     using System.Reflection;
     using System.Data.Entity.ModelConfiguration;
     using BcApiFrame.Data.Entity.ApiBase;
@@ -25,23 +23,6 @@ namespace BcApiFrame.Data.Entity
         public DbSet<BaseUserDetail> BaseUserDetail { get; set; }
         public DbSet<BaseApp> BaseApp { get; set; }
         public DbSet<BaseApiRecord> BaseApiRecord { get; set; }
-
-        #endregion
-
-        #region AppCloud_
-
-        //public DbSet<AppCloud_OrgGroupItem> AppCloud_OrgGroupItem { get; set; }
-        //public DbSet<AppCloud_AppGroupItem> AppCloud_AppGroupItem { get; set; }
-        //public DbSet<AppCloud_Config> AppCloud_Config { get; set; }
-        //public DbSet<AppCloud_Baseframe> AppCloud_Baseframe { get; set; }
-        #endregion
-
-        #region ApiCloud_
-
-        //public DbSet<ApiCloud_ApiRequestInputItem> ApiCloud_ApiRequestInputItem { get; set; }
-        //public DbSet<ApiCloud_ApiResponseOutputItem> ApiCloud_ApiResponseOutputItem { get; set; }
-        //public DbSet<ApiCloud_ApiListItem> ApiCloud_ApiListItem { get; set; }
-        //public DbSet<ApiCloud_ProjectListItem> ApiCloud_ProjectListItem { get; set; }
 
         #endregion
 

@@ -55,41 +55,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\ApiCloud.cs">
+    <Compile Include="BLL\ApiBase.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ApiCloud.tt</DependentUpon>
+      <DependentUpon>ApiBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="BLL\ApiCloud_ApiListItemBLL.cs">
-      <DependentUpon>ApiCloud.tt</DependentUpon>
+    <Compile Include="BLL\BaseApiRecordMapBLL.cs">
+      <DependentUpon>ApiBase.tt</DependentUpon>
     </Compile>
-    <Compile Include="BLL\ApiCloud_ApiRequestInputItemBLL.cs">
-      <DependentUpon>ApiCloud.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BLL\ApiCloud_ApiResponseOutputItemBLL.cs">
-      <DependentUpon>ApiCloud.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BLL\ApiCloud_ProjectListItemBLL.cs">
-      <DependentUpon>ApiCloud.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BLL\AppCloud.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AppCloud.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BLL\AppCloud_AppGroupItemBLL.cs">
-      <DependentUpon>AppCloud.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BLL\AppCloud_BaseframeBLL.cs">
-      <DependentUpon>AppCloud.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BLL\AppCloud_ConfigBLL.cs">
-      <DependentUpon>AppCloud.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BLL\AppCloud_OrgGroupItemBLL.cs">
-      <DependentUpon>AppCloud.tt</DependentUpon>
+    <Compile Include="BLL\BaseAppMapBLL.cs">
+      <DependentUpon>ApiBase.tt</DependentUpon>
     </Compile>
     <Compile Include="BLL\BaseBLL.cs" />
+    <Compile Include="BLL\BaseFunctionMapBLL.cs">
+      <DependentUpon>ApiBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\BaseLogMapBLL.cs">
+      <DependentUpon>ApiBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\BaseRoleMapBLL.cs">
+      <DependentUpon>ApiBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\BaseUserDetailMapBLL.cs">
+      <DependentUpon>ApiBase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\BaseUserMapBLL.cs">
+      <DependentUpon>ApiBase.tt</DependentUpon>
+    </Compile>
     <Compile Include="BLL\MultiOutput.cs">
       <DependentUpon>MultiOutput.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -106,12 +98,7 @@
     <Compile Include="DAL\BaseDAL.cs" />
     <Compile Include="Entity\ApiBase\ApiBase.cs" />
     <Compile Include="Entity\ApiBase\ApiBaseMap.cs" />
-    <Compile Include="Entity\ApiCloud\ApiCloud.cs" />
-    <Compile Include="Entity\AppCloud\AppCloud.cs" />
     <Compile Include="Entity\BaseModel.cs" />
-    <Compile Include="Entity\BookCloud\BookCloud.cs" />
-    <Compile Include="Entity\FunctionCloud\FunctionCloud.cs" />
-    <Compile Include="Entity\IndexBuild\IndexBuild.cs" />
     <Compile Include="Entity\ModelAC.cs" />
     <Compile Include="Migrations\201611260813473_FirstMigration.cs" />
     <Compile Include="Migrations\201611260813473_FirstMigration.Designer.cs">
@@ -121,23 +108,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BLL\ApiCloud\" />
-    <Folder Include="BLL\AppCloud\" />
-    <Folder Include="Entity\Migrations\" />
-    <Folder Include="Test\" />
+    <Folder Include="BLL\ApiBase\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BLL\ApiCloud.tt">
+    <Content Include="BLL\ApiBase.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ApiCloud.cs</LastGenOutput>
-    </Content>
-    <Content Include="BLL\AppCloud.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AppCloud.cs</LastGenOutput>
+      <LastGenOutput>ApiBase.cs</LastGenOutput>
     </Content>
     <Content Include="BLL\MultiOutput.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
