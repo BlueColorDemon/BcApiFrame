@@ -100,9 +100,9 @@
     <Compile Include="Entity\ApiBase\ApiBaseMap.cs" />
     <Compile Include="Entity\BaseModel.cs" />
     <Compile Include="Entity\ModelAC.cs" />
-    <Compile Include="Migrations\201611260813473_FirstMigration.cs" />
-    <Compile Include="Migrations\201611260813473_FirstMigration.Designer.cs">
-      <DependentUpon>201611260813473_FirstMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201611270503403_FirstMigration.cs" />
+    <Compile Include="Migrations\201611270503403_FirstMigration.Designer.cs">
+      <DependentUpon>201611270503403_FirstMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -136,8 +136,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611260813473_FirstMigration.resx">
-      <DependentUpon>201611260813473_FirstMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611270503403_FirstMigration.resx">
+      <DependentUpon>201611270503403_FirstMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

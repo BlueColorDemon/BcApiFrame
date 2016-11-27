@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Mvc;
 
 namespace BcApiFrame.Test
 {
@@ -15,11 +16,11 @@ namespace BcApiFrame.Test
     {
         static void Main(string[] args)
         {
+            //Add_BaseFunctionByMvc();
             //Add_BaseFunctionByApi();
-            //Add_BaseApp()
+            //Add_BaseAppByUser();
             Console.ReadLine();
         }
-
 
         static void Add_BaseFunctionByApi()
         {
@@ -38,7 +39,46 @@ namespace BcApiFrame.Test
                 });
         }
 
-        static void Add_BaseFunction(string ControllerName, string ActionName, BaseFunctionCategory Category)
+        static void Add_BaseFunctionByMvc()
+        {
+            var Types = typeof(BcApiFrame.Web.Controllers.HomeController).Assembly.GetTypes();
+            var controllers = from t in Types
+                              where typeof(Controller).IsAssignableFrom(t) && !t.IsAbstract
+                              orderby t.FullName
+                              from m in t.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.DeclaredOnly)
+                              where !m.IsSpecialName
+                              select new { ControllerName = t.Name, ActionName = m.Name, Params = m.GetParameters() };
+
+            controllers.ToList()
+                .ForEach(c =>
+                {
+                    Add_BaseFunction(c.ControllerName, c.ActionName, BaseFunctionCategory.Default);
+                });
+        }
+
+        static void Add_BaseAppByUser()
+        {
+            var entity = new BaseUser();
+            entity.Account = "demo";
+            entity.Password = "demo";
+            entity.Category = BaseUserCategory.Customer;
+            entity.UserDetail = new BaseUserDetail()
+            {
+                Name = "梁智慧",
+                Email = "214909012@qq.com",
+                Sex = BaseSex.Boy,
+                Note = "首席布道师"
+            };
+            entity.Apps = new List<BaseApp>();
+            entity.Apps.Add(new BaseApp()
+            {
+                Name = "Test",
+                Secret = Guid.NewGuid().ToString()
+            });
+            var reuslt = BaseUserBLL.Instance.Add(entity);
+        }
+
+        private static void Add_BaseFunction(string ControllerName, string ActionName, BaseFunctionCategory Category)
         {
             var entity = new BaseFunction();
             entity.Controller = ControllerName;
@@ -46,14 +86,6 @@ namespace BcApiFrame.Test
             entity.ApiCode = "00000";
             entity.Category = Category;
             var result = BaseFunctionBLL.Instance.Add(entity);
-        }
-
-        static void Add_BaseApp()
-        {
-            var entity = new BaseApp();
-            entity.Name = "Test";
-            entity.Secret = Guid.NewGuid().ToString();
-            var result = BaseAppBLL.Instance.Add(entity);
         }
 
     }

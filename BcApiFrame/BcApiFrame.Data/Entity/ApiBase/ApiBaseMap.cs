@@ -33,9 +33,12 @@ namespace BcApiFrame.Data.Entity.ApiBase
         public BaseRoleMap()
         {
             HasKey(e => e.Id);
-            
+
             Property(e => e.Name).IsRequired().HasMaxLength(200).IsUnicode();
-            Property(e => e.ParentID).HasMaxLength(200).IsUnicode();
+            Property(e => e.Category).IsRequired();
+
+            HasOptional(e => e.Parent).WithMany(e => e.Children).HasForeignKey(e => e.ParentID);//从体设置（等同）→主体设置
+            HasMany(e => e.Children).WithOptional(e => e.Parent).HasForeignKey(e => e.ParentID);//主体设置（等同）→从体设置
 
             HasMany(e => e.Users).WithMany(e => e.Roles).Map(m =>
             {
@@ -72,7 +75,9 @@ namespace BcApiFrame.Data.Entity.ApiBase
             Property(e => e.Account).IsRequired().HasMaxLength(200).IsUnicode();
             Property(e => e.Password).IsRequired().HasMaxLength(200).IsUnicode();
 
-            HasRequired(e => e.UserDetail).WithRequiredPrincipal(e => e.User).WillCascadeOnDelete(true);
+            //HasRequired(e => e.UserDetail).WithRequiredPrincipal(e => e.User).WillCascadeOnDelete(true);
+            HasOptional(e => e.UserDetail).WithRequired(e => e.User).WillCascadeOnDelete(true);//主体设置（等同）→从体设置
+            HasMany(e => e.Apps).WithRequired(e => e.User).HasForeignKey(e => e.User_ID);
 
             ToTable("BaseUser");
         }
@@ -93,6 +98,8 @@ namespace BcApiFrame.Data.Entity.ApiBase
             Property(e => e.Birthday);
             Property(e => e.Height);
             Property(e => e.Note).IsMaxLength().IsUnicode();
+
+            HasRequired(e => e.User).WithOptional(e => e.UserDetail).WillCascadeOnDelete(true);//从体设置（等同）→主体设置
 
             ToTable("BaseUserDetail");
         }

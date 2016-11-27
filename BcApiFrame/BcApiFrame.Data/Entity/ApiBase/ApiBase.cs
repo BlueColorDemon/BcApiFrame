@@ -104,7 +104,7 @@ namespace BcApiFrame.Data.Entity.ApiBase
         /// <summary>
         /// 父角色编号
         /// </summary>
-        public string ParentID { get; set; }
+        public Guid? ParentID { get; set; }
 
 
         /// <summary>
@@ -112,6 +112,18 @@ namespace BcApiFrame.Data.Entity.ApiBase
         /// </summary>
         public BaseRoleCategory Category { get; set; }
         
+
+        /// <summary>
+        /// 子角色集合
+        /// </summary>
+        public virtual ICollection<BaseRole> Children { get; set; }
+
+
+        /// <summary>
+        /// 父角色
+        /// </summary>
+        public virtual BaseRole Parent { get; set; }
+
 
         /// <summary>
         /// 用户集合
@@ -167,7 +179,13 @@ namespace BcApiFrame.Data.Entity.ApiBase
         /// 账户角色集合
         /// </summary>
         public virtual ICollection<BaseRole> Roles { get; set; }
+
         
+        /// <summary>
+        /// App集合
+        /// </summary>
+        public virtual ICollection<BaseApp> Apps { get; set; }
+
 
         /// <summary>
         /// 对应账户
@@ -229,7 +247,7 @@ namespace BcApiFrame.Data.Entity.ApiBase
         /// </summary>
         public string Note { get; set; }
         
-
+        
         /// <summary>
         /// 对应账户
         /// </summary>
@@ -320,6 +338,11 @@ namespace BcApiFrame.Data.Entity.ApiBase
         {
             Category = BaseAppCategory.Default;
         }
+        
+        /// <summary>
+        /// App所属用户ID
+        /// </summary>
+        public Guid User_ID { get; set; }
 
         /// <summary>
         /// App密钥
@@ -345,6 +368,11 @@ namespace BcApiFrame.Data.Entity.ApiBase
         /// 角色集合
         /// </summary>
         public virtual ICollection<BaseRole> Roles { get; set; }
+
+        /// <summary>
+        /// 对应账户
+        /// </summary>
+        public virtual BaseUser User { get; set; }
 
     }
 

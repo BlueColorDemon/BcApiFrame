@@ -13,7 +13,7 @@ namespace BcApiFrame.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201611260813473_FirstMigration"; }
+            get { return "201611270503403_FirstMigration"; }
         }
         
         string IMigrationMetadata.Source

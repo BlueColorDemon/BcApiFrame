@@ -31,6 +31,7 @@ namespace BcApiFrame.Data.Migrations
                 c => new
                     {
                         Id = c.Guid(nullable: false),
+                        User_ID = c.Guid(nullable: false),
                         Secret = c.String(nullable: false, maxLength: 200),
                         Name = c.String(nullable: false, maxLength: 200),
                         Description = c.String(),
@@ -41,7 +42,9 @@ namespace BcApiFrame.Data.Migrations
                         UpdateUser = c.String(),
                         State = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.BaseUser", t => t.User_ID, cascadeDelete: true)
+                .Index(t => t.User_ID);
             
             CreateTable(
                 "dbo.BaseRole",
@@ -49,7 +52,7 @@ namespace BcApiFrame.Data.Migrations
                     {
                         Id = c.Guid(nullable: false),
                         Name = c.String(nullable: false, maxLength: 200),
-                        ParentID = c.String(maxLength: 200),
+                        ParentID = c.Guid(),
                         Category = c.Int(nullable: false),
                         CreateTime = c.DateTime(nullable: false),
                         CreateUser = c.String(),
@@ -57,7 +60,9 @@ namespace BcApiFrame.Data.Migrations
                         UpdateUser = c.String(),
                         State = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.BaseRole", t => t.ParentID)
+                .Index(t => t.ParentID);
             
             CreateTable(
                 "dbo.BaseFunction",
@@ -176,6 +181,8 @@ namespace BcApiFrame.Data.Migrations
             DropForeignKey("dbo.BaseRoleUser", "User_Id", "dbo.BaseUser");
             DropForeignKey("dbo.BaseRoleUser", "Role_Id", "dbo.BaseRole");
             DropForeignKey("dbo.BaseUserDetail", "Id", "dbo.BaseUser");
+            DropForeignKey("dbo.BaseApp", "User_ID", "dbo.BaseUser");
+            DropForeignKey("dbo.BaseRole", "ParentID", "dbo.BaseRole");
             DropForeignKey("dbo.BaseRoleFunction", new[] { "Controller", "Action" }, "dbo.BaseFunction");
             DropForeignKey("dbo.BaseRoleFunction", "Role_Id", "dbo.BaseRole");
             DropForeignKey("dbo.BaseRoleApp", "App_Id", "dbo.BaseApp");
@@ -187,6 +194,8 @@ namespace BcApiFrame.Data.Migrations
             DropIndex("dbo.BaseRoleApp", new[] { "App_Id" });
             DropIndex("dbo.BaseRoleApp", new[] { "Role_Id" });
             DropIndex("dbo.BaseUserDetail", new[] { "Id" });
+            DropIndex("dbo.BaseRole", new[] { "ParentID" });
+            DropIndex("dbo.BaseApp", new[] { "User_ID" });
             DropTable("dbo.BaseRoleUser");
             DropTable("dbo.BaseRoleFunction");
             DropTable("dbo.BaseRoleApp");
