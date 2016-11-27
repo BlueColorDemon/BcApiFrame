@@ -8,6 +8,17 @@ namespace BcApiFrame.Web.Controllers
 {
     public class HomeController : Controller
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+        public ActionResult PermissionError(string msg = "")
+        {
+            ViewBag.msg = msg;
+            return View();
+        }
+
         public ActionResult Index()
         {
             return View();

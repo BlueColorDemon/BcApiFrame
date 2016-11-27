@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BcApiFrame.Util", "BcApiFra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BcApiFrame.Test", "BcApiFrame.Test\BcApiFrame.Test.csproj", "{B29001D8-E44D-49AB-BE49-33B6D3F16B9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BcApiFrame.Permission", "BcApiFrame.Permission\BcApiFrame.Permission.csproj", "{595CD7C2-2AC8-4F23-A84C-C49CDBB0B6BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05-Permission", "05-Permission", "{B5D4F301-D969-4328-91C9-B03D0F0061D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +69,10 @@ Global
 		{B29001D8-E44D-49AB-BE49-33B6D3F16B9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B29001D8-E44D-49AB-BE49-33B6D3F16B9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B29001D8-E44D-49AB-BE49-33B6D3F16B9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{595CD7C2-2AC8-4F23-A84C-C49CDBB0B6BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{595CD7C2-2AC8-4F23-A84C-C49CDBB0B6BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{595CD7C2-2AC8-4F23-A84C-C49CDBB0B6BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{595CD7C2-2AC8-4F23-A84C-C49CDBB0B6BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,5 +82,6 @@ Global
 		{C5C04F01-B9C5-4EA6-AB61-C5711311F3A2} = {CDC716C5-9290-4DB4-8A17-63FE4DCB838D}
 		{7F498DEF-5FC8-49F8-AC5A-D7D664614EE5} = {67C8A659-2BA4-4621-BEFF-BEB26A3C282E}
 		{D9D73DE5-BFC0-45FD-A5C8-A0E29D4523FC} = {58AC6FE0-E9BE-44E2-B475-E9ADCCE33C64}
+		{595CD7C2-2AC8-4F23-A84C-C49CDBB0B6BB} = {B5D4F301-D969-4328-91C9-B03D0F0061D6}
 	EndGlobalSection
 EndGlobal

@@ -19,6 +19,7 @@ namespace BcApiFrame.Data.Entity.ApiBase
             : base()
         {
             Category = BaseFunctionCategory.Default;
+            Roles = new HashSet<BaseRole>();
         }
 
         /// <summary>
@@ -77,7 +78,7 @@ namespace BcApiFrame.Data.Entity.ApiBase
 
 
     #endregion
-    
+
 
     #region 用户角色
 
@@ -91,7 +92,10 @@ namespace BcApiFrame.Data.Entity.ApiBase
             : base()
         {
             Category = BaseRoleCategory.Default;
+            Children = new HashSet<BaseRole>();
             Users = new HashSet<BaseUser>();
+            Functions = new HashSet<BaseFunction>();
+            Apps = new HashSet<BaseApp>();
         }
 
 
@@ -111,7 +115,7 @@ namespace BcApiFrame.Data.Entity.ApiBase
         /// 角色分类
         /// </summary>
         public BaseRoleCategory Category { get; set; }
-        
+
 
         /// <summary>
         /// 子角色集合
@@ -136,7 +140,7 @@ namespace BcApiFrame.Data.Entity.ApiBase
         /// </summary>
         public virtual ICollection<BaseFunction> Functions { get; set; }
 
-        
+
         /// <summary>
         /// App集合
         /// </summary>
@@ -154,6 +158,7 @@ namespace BcApiFrame.Data.Entity.ApiBase
         {
             Category = BaseUserCategory.Default;
             Roles = new HashSet<BaseRole>();
+            Apps = new HashSet<BaseApp>();
         }
 
 
@@ -180,7 +185,7 @@ namespace BcApiFrame.Data.Entity.ApiBase
         /// </summary>
         public virtual ICollection<BaseRole> Roles { get; set; }
 
-        
+
         /// <summary>
         /// App集合
         /// </summary>
@@ -204,7 +209,7 @@ namespace BcApiFrame.Data.Entity.ApiBase
         {
             Sex = BaseSex.None;
         }
-        
+
 
         /// <summary>
         /// 昵称
@@ -246,8 +251,8 @@ namespace BcApiFrame.Data.Entity.ApiBase
         /// 简介
         /// </summary>
         public string Note { get; set; }
-        
-        
+
+
         /// <summary>
         /// 对应账户
         /// </summary>
@@ -337,8 +342,9 @@ namespace BcApiFrame.Data.Entity.ApiBase
             : base()
         {
             Category = BaseAppCategory.Default;
+            Roles = new HashSet<BaseRole>();
         }
-        
+
         /// <summary>
         /// App所属用户ID
         /// </summary>

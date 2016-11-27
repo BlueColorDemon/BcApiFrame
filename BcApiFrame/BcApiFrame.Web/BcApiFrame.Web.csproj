@@ -185,6 +185,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\PermissionError.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -219,6 +220,10 @@
     <ProjectReference Include="..\BcApiFrame.Log\BcApiFrame.Log.csproj">
       <Project>{c5c04f01-b9c5-4ea6-ab61-c5711311f3a2}</Project>
       <Name>BcApiFrame.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BcApiFrame.Permission\BcApiFrame.Permission.csproj">
+      <Project>{595cd7c2-2ac8-4f23-a84c-c49cdbb0b6bb}</Project>
+      <Name>BcApiFrame.Permission</Name>
     </ProjectReference>
     <ProjectReference Include="..\BcApiFrame.Util\BcApiFrame.Util.csproj">
       <Project>{d9d73de5-bfc0-45fd-a5c8-a0e29d4523fc}</Project>

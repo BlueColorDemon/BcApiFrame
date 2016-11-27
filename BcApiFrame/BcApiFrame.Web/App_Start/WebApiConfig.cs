@@ -9,6 +9,7 @@ namespace BcApiFrame.Web
     {
         public static void Register(HttpConfiguration config)
         {
+            config.Filters.Add(new Permission.Filter_Permission.Filter_ApiPermission());
             config.Filters.Add(new Log.Filter_ApiRecord.Filter_ApiRecord());
             config.Filters.Add(new Log.Filter_ErrorRecord.ApiHandleErrorAttribute());
             config.Filters.Add(new Log.Filter_Monitor.StatisticsTrackerApiAttribute());
